@@ -24,13 +24,9 @@ def if_email(case):
         return 0
     else:
         return 1
-
-
-given_text = ''' India.come mail@haris.com मराठी বাংলা Essel Group 90 years India.comemail@haris.com sales@corp.india.com support@india.com
-NEWS
-You can add your text of garbage + email here
-'''
-
+    
+    print("Please Input your text.")
+    given_text = input()
 a = given_text.split()
 emails = []
 for i in range(0, len(a)):
