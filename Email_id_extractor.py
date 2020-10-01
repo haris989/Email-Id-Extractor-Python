@@ -25,6 +25,13 @@ def if_email(case):
     else:
         return 1
 
+# for extracting the emails from a webpage
+def extract_from_url(url):
+    import requests
+    import re
+    r = requests.get(url)
+    emails = re.finditer(r"\w+@\w\.\w+", r.text)
+    return [email.group() for email in emails]
 
 given_text = ''' India.come mail@haris.com मराठी বাংলা Essel Group 90 years India.comemail@haris.com sales@corp.india.com support@india.com
 NEWS
